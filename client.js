@@ -3,14 +3,14 @@ console.log('jquery-salary-calculator');
 $( document ).ready(readyNow)
 
 function readyNow(){
-    $('#submitButton').on('click', addItem)
+    $('#submitButton').on('click', addEmployee)
     
 }//end readyNow
 
 
 
-function addItem(){
-    console.log('in addItem');
+function addEmployee(){
+    console.log('in addEmployee');
     
   
     let firstName = $('#firstNameIn').val();
@@ -19,12 +19,12 @@ function addItem(){
     let jobTitle = $('#jobTitleIn').val();
     let annualSalary = $('#annualSalaryIn').val();
 
-    let employeeOut = $('#employeeOut');
-    // employeeOut.empty();
+    let addRow = $('#addEmployeeRow');
+    // addEmployee.empty();
 
-    employeeOut.append(`<tr><td>${firstName}</td><td>${lastName}</td></tr>`)
+    addRow.append(`<tr><td>${firstName}</td><td>${lastName}</td><td>${idNumber}</td><td>${jobTitle}</td><td>${annualSalary}</td></tr>`)
 
-}//end addItem
+}//end addEmployee
 
 function displayEmployee(){
     console.log('in displayEmployee');
